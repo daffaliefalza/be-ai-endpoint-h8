@@ -46,3 +46,12 @@ It allows you to send text prompts, upload files, and get AI-generated responses
     npm start
 
 5. **The API will run on http://localhost:3000** by default.
+
+## API Endpoints Overview
+
+| Method | Endpoint                  | Description                                      | Request Type           | Required Fields      |
+|--------|---------------------------|--------------------------------------------------|-----------------------|---------------------|
+| POST   | `/generate-text`          | Generate AI response from a text-only prompt.    | `application/json`    | `prompt` (string)   |
+| POST   | `/generate-from-image`    | Upload an image for AI analysis or description.  | `multipart/form-data` | `image` (file)      |
+| POST   | `/generate-from-document` | Upload a document for summarization/extraction.  | `multipart/form-data` | `document` (file)   |
+| POST   | `/generate-from-audio`    | Upload an audio file for transcription/analysis. | `multipart/form-data` | `audio` (file)      |
